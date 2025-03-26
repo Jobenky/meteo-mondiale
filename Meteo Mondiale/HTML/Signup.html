@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <script src="./js/script.js"></script>
+    <link rel="Website icon" type="png"
+    href="../assets/Logo Design Site/JOBY_CLOUD-removebg-preview.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #111111, #04a5b14d);
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 900px;
+            background-image: url(./IMG-20250324-WA0005.jpg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(5, 230, 230, 0.856);
+        }
+        .left-panel, .right-panel {
+            padding: 20px;
+            flex: 1;
+            min-width: 300px;
+        }
+        .left-panel h1 span {
+            color: #007bff;
+        }
+        #text1 {
+            margin-top: 20px;
+        }
+        #text {
+            margin-top: 20px;
+        }
+        .explore, .book, .right-panel button {
+            padding: 10px;
+            border: none;
+            margin: 10px 5px 0 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .explore {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+            margin-top: 30px;
+        }
+        .book, .right-panel button {
+            background: #007bff;
+            color: white;
+        }
+        .right-panel form {
+            display: flex;
+            flex-direction: column;
+        }
+        .right-panel input {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background: #222;
+            color: white;
+        }
+        #logo-text {
+            font-family: 'Houstonville';
+        }
+        .right-panel p {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .right-panel p a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+                max-width: 75%;
+                margin-top: 90px;
+            }
+            .explore, .book {
+                width: 100%;
+            }
+            .right-panel form input,
+            .right-panel form button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="logo">
+            <img src="../assets/Logo Design Site/JOBY_CLOUD-removebg-preview.png" alt="Logo Jobycloud" class="logo-image">
+            
+            <strong id="logo-text">Météo Mondiale</strong>
+        </div>
+
+        <nav>
+            <div class="search-icon"></div>
+            <ul>
+                <li><a href="https://www.google.com/maps" target="_blank">Maps</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./Signup.html">S'inscrire</a></li>
+                <li><a href="./Login.html">Se connecter</a></li>
+            </ul>
+        </nav>
+       
+        <!--Hamburger -->
+<div id="menu-container">
+    <button id="menu-toggle">☰</button>
+    <div id="dropdown-menu">
+        <ul>
+            <li><a href="https://www.google.com/maps" target="_blank">Maps</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./Signup.html">S'inscrire</a></li>
+            <li><a href="./Login.html">Se connecter</a></li>
+        </ul>
+    </div>
+</div>
+
+        <div class="theme-switcher" onmouseover="showThemeOptions()" onmouseleave="hideThemeOptions()">
+            <button id="theme-toggle" onclick="setTheme()">☀️Mode</button>
+            <div class="theme-options">
+                <button onclick="setTheme('light')">☀️ Clair</button>
+                <button onclick="setTheme('dark')">🌙 Sombre</button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="left-panel">
+            <h2>Sign Up FREE</h2>
+            <h1 id="text1">Take pleasure <span>in connection</span>, with JobyCloud!!!</h1>
+            <p id="text">Start with the simplest website to know all the weather data of your city.</p>
+            <button class="explore"><a href="./index.html">Explore more</a></button>
+        </div>
+        <div class="right-panel">
+            <h2>Create new account:</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit"><a href="./index.html">Create Account</a></button>
+                <p>Already A Member? <a href="./Login.html">Log In</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
